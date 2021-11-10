@@ -31,7 +31,7 @@ where state is not null
 group by State
 
 
---(TABLE 3 FOR TABLEAU) View travel by month 
+--(TABLE 3 FOR TABLEAU) View pct staying home by month 
 select month, year, Avg(Population_Staying_at_Home) as average_population_home, avg(Population_Sampled) as average_population_sampled, avg(Population_Staying_at_Home)/avg(Population_Sampled) *100 as avg_pct_at_home
 from Trips_by_Distance$
 where level like '%national%'
@@ -120,3 +120,5 @@ avg_pct_less_1 + avg_pct_1to3 + avg_pct_3to5 + avg_pct_5to10 + avg_pct_10to25 + 
 from #pct_distance_breakdown
 --where year = 2019
 order by Year
+
+--Next find state with highest pct who drove over a specified distance
