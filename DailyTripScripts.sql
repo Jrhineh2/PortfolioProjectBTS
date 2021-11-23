@@ -120,5 +120,3 @@ avg_pct_less_1 + avg_pct_1to3 + avg_pct_3to5 + avg_pct_5to10 + avg_pct_10to25 + 
 from #pct_distance_breakdown
 --where year = 2019
 order by Year
-
---Next find state with highest pct who drove over a specified distance
